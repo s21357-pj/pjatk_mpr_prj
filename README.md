@@ -16,12 +16,12 @@ Nowy wniosek reprezentuje klasa Application.
 Application testApp = new Application("TestName", "TestSurname", "9001249012903");
 
 ### Przetwarzanie wniosku
-assertSame("VERIFICATION", testApp.currentState.startProcess("").toString());
-assertSame("FULFILLMENT", testApp.currentState.toFulfillment("").toString());
-assertSame("VERIFICATION", testApp.currentState.verify("").toString());
-assertSame("PRINTING", testApp.currentState.accept("").toString());
-assertSame("READY_APPLICATION", testApp.currentState.toReady("").toString());
-assertSame("CLOSED_APPLICATION", testApp.currentState.close("").toString());
+assertSame("VERIFICATION", testApp.currentState.startProcess("comment").toString());
+assertSame("FULFILLMENT", testApp.currentState.toFulfillment("comment").toString());
+assertSame("VERIFICATION", testApp.currentState.verify("comment").toString());
+assertSame("PRINTING", testApp.currentState.accept("comment").toString());
+assertSame("READY_APPLICATION", testApp.currentState.toReady("comment").toString());
+assertSame("CLOSED_APPLICATION", testApp.currentState.close("comment").toString());
 
 ### Sprawdzenie na jakim etapie jest wniosek
 testApp.currentState.toString();
