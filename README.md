@@ -23,6 +23,9 @@ assertSame("PRINTING", testApp.currentState.accept("").toString());
 assertSame("READY_APPLICATION", testApp.currentState.toReady("").toString());
 assertSame("CLOSED_APPLICATION", testApp.currentState.close("").toString());
 
+### sprawdzenie na jakim etapie jest wniosek
+testApp.currentState.toString();
+
 ### Historia stanów
 testApp.getHistory();
 
